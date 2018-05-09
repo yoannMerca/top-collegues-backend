@@ -14,6 +14,13 @@ public class Version {
 
     private String name;
 
+    public Version() {
+    }
+
+    public Version(String name) {
+        this.name = name;
+    }
+
     public Integer getId() {
         return id;
     }
