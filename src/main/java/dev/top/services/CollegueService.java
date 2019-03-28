@@ -34,9 +34,9 @@ public class CollegueService {
         Integer score = collegueTrouve.getScore();
 
         if (avis.equals(Avis.AIMER)) {
-            collegueTrouve.setScore(score + 100);
+            collegueTrouve.setScore(score + 10);
         } else if (avis.equals(Avis.DETESTER)) {
-            collegueTrouve.setScore(score - 100);
+            collegueTrouve.setScore(score - 10);
         }
 
         return collegueTrouve;
