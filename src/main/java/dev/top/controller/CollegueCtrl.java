@@ -22,7 +22,7 @@ public class CollegueCtrl {
         return this.collectionRepo.findAll();
     }
 
-   @GetMapping("/pseudo")
+   @GetMapping("/{pseudo}")
     public Collegue findByPseudo(String pseudo) {
         return this.collectionRepo.findByPseudo(pseudo).orElseThrow( () -> new RuntimeException("plop"));
     } 
