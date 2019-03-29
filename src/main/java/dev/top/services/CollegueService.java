@@ -43,4 +43,8 @@ public class CollegueService {
 
     }
 
+	public  void save(Collegue newCollegues) {
+        this.colRepo.save(newCollegues);
+	}
+
 }

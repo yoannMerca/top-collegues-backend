@@ -85,4 +85,9 @@ public class Collegue {
         this.pseudo = pseudo;
     }
 
+@Override
+public String toString() {
+    return this.photo + "  "+ this.pseudo +" " +this.pseudo+ " "+ this.score;
+}
+
 }
