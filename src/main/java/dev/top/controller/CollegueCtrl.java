@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import dev.top.entities.Collegue;
@@ -40,5 +41,10 @@ public class CollegueCtrl{
     @PatchMapping("/{pseudo}")
     public Collegue voter(@PathVariable String pseudo, @RequestBody Vote vote) {
         return this.collegueService.voter(pseudo, vote.getAction());
+    }
+    
+    @GetMapping("/")
+    public Collegue findByPseudo(@RequestParam String pseudo) {
+        return this.collegueService.findByPseudo(pseudo);
     }
 }

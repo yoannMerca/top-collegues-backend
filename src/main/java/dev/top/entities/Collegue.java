@@ -17,8 +17,9 @@ public class Collegue {
     private Integer score;
 
     private String photo;
-
+    private String prenom;
     private String pseudo;
+    private String email;
 
     public Collegue(String pseudo,String photo,Integer score) {
         this.pseudo = pseudo;
@@ -26,6 +27,15 @@ public class Collegue {
         this.score = score;
     }
     
+    public Collegue(String nom, String prenom, String photo,String email ) {
+        this.pseudo = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.photo = photo;
+        this.score = 100;
+
+    }
+
     public Collegue() {
     }
 
@@ -89,5 +99,33 @@ public class Collegue {
 public String toString() {
     return this.photo + "  "+ this.pseudo +" " +this.pseudo+ " "+ this.score;
 }
+
+    /**
+     * @return the prenom
+     */
+    public String getPrenom() {
+        return prenom;
+    }
+
+    /**
+     * @param prenom the prenom to set
+     */
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    /**
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
 }

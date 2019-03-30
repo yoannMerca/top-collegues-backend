@@ -6,12 +6,21 @@ public class NewCollegue {
 
     private String nom;
 
+    private String prenom;
+
     private String photo;
+
+    private String email;
+
+
 
     public NewCollegue(){
     }
     
     public NewCollegue(String matricule, String nom, String photo) {
+    }
+    
+    public NewCollegue(String matricule, String nom, String prenom, String photo,String email ) {
     }
 
     /**
@@ -60,5 +69,33 @@ public class NewCollegue {
     @Override
     public String toString() {
        return "matricule =>"+ this.matricule +" pseudo =>" +this.nom +" image =>" +this.photo;
+    }
+
+    /**
+     * @return the prenom
+     */
+    public String getPrenom() {
+        return prenom;
+    }
+
+    /**
+     * @param prenom the prenom to set
+     */
+    public void setPrenom(String prenom) {
+        this.prenom = prenom;
+    }
+
+    /**
+     * @return the email
+     */
+    public String getEmail() {
+        return email;
+    }
+
+    /**
+     * @param email the email to set
+     */
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

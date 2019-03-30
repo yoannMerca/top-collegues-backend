@@ -1,5 +1,8 @@
 package dev.top.services;
+
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -19,6 +22,11 @@ public class CollegueService {
 
     public List<Collegue> findAll() {
         return colRepo.findAll();
+    }
+
+    public Collegue findByPseudo(String pseudo){
+        return this.colRepo.findByPseudo(pseudo)
+                .orElseThrow(() -> new TopCollegueException("la personne n'existe plus"));
     }
 
     @Transactional
