@@ -24,6 +24,9 @@ public class NewCollegueService<NewCollegueRepo> {
             }
             newCol.setPseudo(c.getNom());
             newCol.setScore(100);
+            newCol.setPhoto(c.getPhoto());
+            newCol.setEmail(result[0].getEmail());
+            newCol.setPrenom(result[0].getPrenom());
         }
         return newCol;
     }

@@ -52,7 +52,11 @@ public class CollegueService {
     }
 
 	public  void save(Collegue newCollegues) {
-        this.colRepo.save(newCollegues);
+      if(this.colRepo.findByPseudo(newCollegues.getPseudo()).isPresent()){
+            throw new TopCollegueException("le pseudo " + newCollegues.getPseudo() + " est deja existant");
+      }else {
+          this.colRepo.save(newCollegues);
+      }
 	}
 
 }
