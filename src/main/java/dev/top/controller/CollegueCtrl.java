@@ -43,7 +43,9 @@ public class CollegueCtrl{
         return this.collegueService.voter(pseudo, vote.getAction());
     }
     
-    @GetMapping("/")
+    @GetMapping(
+        params = "pseudo"
+    )
     public Collegue findByPseudo(@RequestParam String pseudo) {
         return this.collegueService.findByPseudo(pseudo);
     }
